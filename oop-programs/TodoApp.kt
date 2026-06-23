@@ -8,4 +8,14 @@ fun main() {
         println("3: Delete task")
         println("4: Exit")
         print("Choose (1-4): ")
-    }
+
+        val choice = readLine() ?: continue
+        
+        when (choice) {
+            "1" -> {
+                print("Enter task: ")
+                val task = readLine() ?: continue
+                tasks.add(task)
+                println("Task added!")
+            }
+            "2" -> {
